@@ -48,7 +48,7 @@ public class UsersController {
 	}
 
 	/**
-	 * Method to fetch all usres from the db.
+	 * Method to fetch all users from the db.
 	 * @return
 	 */
 	@GetMapping(value= "/getall")
@@ -64,7 +64,7 @@ public class UsersController {
 	 */
 	@GetMapping(value= "/getbyid/{user-id}")
 	public Optional<Users> getById(@PathVariable(value= "user-id") int id) {
-		logger.debug("Getting employee with employee-id= {}.", id);
+		logger.debug("Getting user with user-id= {}.", id);
 		return userServ.findUserById(id);
 	}
 
@@ -76,10 +76,10 @@ public class UsersController {
 	 */
 	@PutMapping(value= "/update/{user-id}")
 	public String update(@PathVariable(value= "user-id") int id, @RequestBody Users user) {
-		logger.debug("Updating employee with employee-id= {}.", id);
+		logger.debug("Updating user with user-id= {}.", id);
 		user.setId(id);
 		userServ.updateUser(user);
-		return "Employee record for user-id= " + id + " updated.";
+		return "User record for user-id= " + id + " updated.";
 	}
 
 	/**
