@@ -1,15 +1,16 @@
-package com.tempstructures.newdam.userservice;
+package com.tempstructures.parking.userservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@EnableEurekaClient
-public class UserService {
+//@EnableEurekaClient
+@ComponentScan("com.tempstructures.parking")
+public class UserServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UserService.class, args);
+		SpringApplication.run(UserServiceApplication.class, args);
 	}
 
 }
