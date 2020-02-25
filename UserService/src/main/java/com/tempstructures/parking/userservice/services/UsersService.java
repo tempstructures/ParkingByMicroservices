@@ -25,13 +25,13 @@ public interface UsersService {
 	 * @param id
 	 * @return
 	 */
-	public Optional<Users> findUserById(int id);
+	public Optional<Users> findUserById(String id);
 
 	/**
 	 * Method to delete user by id using mongo-db repository.
 	 * @param id
 	 */
-	public void deleteUserById(int id);
+	public void deleteUserById(String id);
 
 	/**
 	 * Method to update user by id using mongo-db repository.

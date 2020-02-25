@@ -3,7 +3,6 @@ package com.tempstructures.parking.userservice.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -48,7 +47,7 @@ public class UsersController {
 	}
 
 	/**
-	 * Method to fetch all users from the db.
+	 * Method to fetch all user from the db.
 	 * @return
 	 */
 	@GetMapping(value= "/getall")
@@ -63,7 +62,7 @@ public class UsersController {
 	 * @return
 	 */
 	@GetMapping(value= "/getbyid/{user-id}")
-	public Optional<Users> getById(@PathVariable(value= "user-id") int id) {
+	public Optional<Users> getById(@PathVariable(value= "user-id") String id) {
 		logger.debug("Getting user with user-id= {}.", id);
 		return userServ.findUserById(id);
 	}
@@ -75,11 +74,11 @@ public class UsersController {
 	 * @return
 	 */
 	@PutMapping(value= "/update/{user-id}")
-	public String update(@PathVariable(value= "user-id") int id, @RequestBody Users user) {
+	public String update(@PathVariable(value= "user-id") String id, @RequestBody Users user) {
 		logger.debug("Updating user with user-id= {}.", id);
 		user.setId(id);
 		userServ.updateUser(user);
-		return "User record for user-id= " + id + " updated.";
+		return "user record for user-id= " + id + " updated.";
 	}
 
 	/**
@@ -88,7 +87,7 @@ public class UsersController {
 	 * @return
 	 */
 	@DeleteMapping(value= "/delete/{user-id}")
-	public String delete(@PathVariable(value= "user-id") int id) {
+	public String delete(@PathVariable(value= "user-id") String id) {
 		logger.debug("Deleting user with user-id= {}.", id);
 		userServ.deleteUserById(id);
 		return "User record for user-id= " + id + " deleted.";

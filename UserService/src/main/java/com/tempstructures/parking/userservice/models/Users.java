@@ -9,21 +9,23 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Users {
 	
 	@Id
-    private int id;
-    String firstName;
+	private String id;
+
+	String firstName;
     String middleName;
     String lastName;
     String empNumber;
     String empId;
     String emailId;
     
-    public int getId() {
+    
+   
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
-	
 	public String getFirstName() {
 		return firstName;
 	}

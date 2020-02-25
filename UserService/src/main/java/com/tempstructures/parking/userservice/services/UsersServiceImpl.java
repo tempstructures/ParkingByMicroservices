@@ -37,15 +37,16 @@ public class UsersServiceImpl implements UsersService {
      * @see com.assignment.springboot.mongo.service.UsersService#findUserById(int)
      */
     @Override
-    public Optional<Users> findUserById(int id) {
+    public Optional<Users> findUserById(String id) {
         return userRepo.findById(id);
+     
     }
  
     /* (non-Javadoc)
      * @see com.assignment.springboot.mongo.service.UsersService#deleteUserById(int)
      */
     @Override
-    public void deleteUserById(int id) {
+    public void deleteUserById(String id) {
     	userRepo.deleteById(id);
     }
  
