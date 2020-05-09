@@ -3,6 +3,7 @@
 
 
 Setup MongoDB Docker Container
+
 	docker run --name=myMongoDB --volume="/Users/<<LocalUSerName>>/Docker/MongoDBMount/configdb:/data/configdb:Z" --	volume="/Users/<<LocalUSerName>>/Docker/MongoDBMount/db:/data/db:Z" --volume="/data/configdb" --volume="/data/db" -p 	     27017:27017/ -p 0.0.0.0:27017:27017 --restart= --detach=true mongo:latest mongod
 	
 	
