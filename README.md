@@ -8,13 +8,13 @@ Setup MongoDB Docker Container
 
 Setup Kafka Docker Container
 
-	1. Install Dockerized Kafka Container
+	1. Install Kafka Container
 
 	docker run --name myKafka -it --rm -p 2181:2181 -p 3030:3030 -p 8081:8081 \
 	-p 8082:8082 -p 8083:8083 -p 9092:9092 \
 	-e ADV_HOST=127.0.0.1 \lensesio/fast-data-dev:latest
 	
-	This will install dockerized kafka with lensesio ui on top
+	This will install kafka container with lensesio ui on top
 	For details visit: https://github.com/lensesio/fast-data-dev
 
 	Access lensesio UI on url: http://localhost:3030
