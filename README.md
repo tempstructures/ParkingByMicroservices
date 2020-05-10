@@ -1,5 +1,11 @@
 # ParkingByMicroservices
 
+--Services with MongoBD
+--2PC (2 phase commit protocol) implementation to maintain data consistency using Apache Kafka for Eventual Consistency
+--Event driven architecture in services
+--Exactly-once Kafka Dynamic Consumer via Subscribe (One and Only One Message Delivery)
+
+
 
 
 Setup MongoDB Docker Container
